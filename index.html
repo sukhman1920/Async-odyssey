@@ -1,13 +1,64 @@
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>async-odyssey</title>
+    <meta name="theme-color" content="#0b0b0b" />
+    <meta name="description" content="AutoRadar: explora el mundo de los superdeportivos." />
+    <title>AutoRadar | Supercar Collection</title>
   </head>
+
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header class="navbar">
+        <a class="logo" href="#">AUTO<span>RADAR</span></a>
+        <span class="nav-label">SUPERCAR COLLECTION</span>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">THE ART OF PERFORMANCE</p>
+          <h1>Más que coches.<br /><span>Obras de ingeniería.</span></h1>
+          <p class="hero-description">
+            Explora algunas de las máquinas más impresionantes del mundo.
+          </p>
+        </section>
+
+        <section class="catalogue">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">CURATED COLLECTION</p>
+              <h2>Modelos Ferrari</h2>
+            </div>
+            <span id="car-count">Preparando catálogo...</span>
+          </div>
+
+          
+          <div class="catalogue-controls">
+            <label for="car-search">Buscar modelo</label>
+            <input
+              id="car-search"
+              type="search"
+              placeholder="Ej. Ferrari 488..."
+              autocomplete="off"
+            />
+          </div>
+
+
+          <div id="status" role="status" aria-live="polite">
+            Preparando AutoRadar...
+          </div>
+
+          <div id="car-grid" class="car-grid"></div>
+        </section>
+      </main>
+
+      <footer>
+        <p>AUTORADAR <span>·</span> PASSION FOR PERFORMANCE</p>
+      </footer>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
