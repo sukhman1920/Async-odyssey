@@ -4,47 +4,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b0b0b" />
-    <meta name="description" content="AutoRadar: explora el mundo de los superdeportivos." />
+    <meta name="theme-color" content="#090909" />
+    <meta
+      name="description"
+      content="AutoRadar: descubre y explora el mundo de los superdeportivos."
+    />
     <title>AutoRadar | Supercar Collection</title>
   </head>
 
   <body>
     <div id="app">
+      
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <nav id="scroll-navbar" class="scroll-navbar" aria-label="Controles rápidos">
+      <a class="logo" href="#" aria-label="AutoRadar, inicio">
+        AUTO<span>RADAR</span>
+      </a>
+
+      <select id="brand-filter" aria-label="Filtrar por marca">
+        <option value="all">Todas las marcas</option>
+      </select>
+
+      <button id="theme-toggle" type="button" aria-pressed="false">
+        Modo clásico
+      </button>
+    </nav>
+
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      type="button"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+    >
+      ↑
+    </button>
+
       <header class="navbar">
-        <a class="logo" href="#">AUTO<span>RADAR</span></a>
+        <a class="logo" href="#" aria-label="AutoRadar, inicio">
+          AUTO<span>RADAR</span>
+        </a>
+
         <span class="nav-label">SUPERCAR COLLECTION</span>
       </header>
 
       <main>
         <section class="hero">
           <p class="eyebrow">THE ART OF PERFORMANCE</p>
-          <h1>Más que coches.<br /><span>Obras de ingeniería.</span></h1>
+
+          <h1>
+            Más que coches.<br />
+            <span>Obras de ingeniería.</span>
+          </h1>
+
           <p class="hero-description">
-            Explora algunas de las máquinas más impresionantes del mundo.
+            Descubre máquinas extraordinarias, marcas legendarias
+            y la ingeniería que lleva el rendimiento al límite.
           </p>
         </section>
 
-        <section class="catalogue">
+        <section class="catalogue" aria-labelledby="catalogue-title">
           <div class="section-heading">
             <div>
               <p class="eyebrow">CURATED COLLECTION</p>
-              <h2>Modelos Ferrari</h2>
+              <h2 id="catalogue-title">Catálogo de superdeportivos</h2>
             </div>
-            <span id="car-count">Preparando catálogo...</span>
+
+            <span id="car-count" aria-live="polite">
+              Preparando catálogo...
+            </span>
           </div>
 
-          
           <div class="catalogue-controls">
-            <label for="car-search">Buscar modelo</label>
+            <label for="car-search">Buscar marca o modelo</label>
+
             <input
               id="car-search"
               type="search"
-              placeholder="Ej. Ferrari 488..."
+              placeholder="Ej. Ferrari, McLaren, Porsche..."
               autocomplete="off"
             />
           </div>
-
 
           <div id="status" role="status" aria-live="polite">
             Preparando AutoRadar...
@@ -55,7 +96,29 @@
       </main>
 
       <footer>
-        <p>AUTORADAR <span>·</span> PASSION FOR PERFORMANCE</p>
+        <div class="footer-brand">
+          <div class="footer-logo">AUTO<span>RADAR</span></div>
+
+          <p class="footer-tagline">
+            PASSION FOR PERFORMANCE.
+          </p>
+        </div>
+
+        <div class="footer-meta">
+          <p><strong>THE WORLD OF SUPERCARS</strong></p>
+          <p>Ingeniería · Diseño · Rendimiento</p>
+        </div>
+
+        <div class="footer-line"></div>
+
+        <div class="footer-bottom">
+          <p>
+            © <span id="current-year">2026</span> AutoRadar.
+            Proyecto educativo.
+          </p>
+
+          <p>HECHO PARA LOS AMANTES DEL MOTOR <span>◆</span></p>
+        </div>
       </footer>
     </div>
 
